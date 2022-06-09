@@ -1,0 +1,47 @@
+.item {
+  width: 158px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 92px;
+    border-radius: 23px;
+  }
+
+  &__info {
+    position: relative;
+  }
+}
+
+.info {
+  text-align: center;
+
+  &__today {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  &__temp {
+    margin: 4px;
+    color: bisque;
+    font-size: 35px;
+  }
+}

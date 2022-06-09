@@ -1,0 +1,13 @@
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Choose the weather service</mat-label>
+    <mat-select [(ngModel)]="dialogData.selectedWeatherService" name="service" [ngModelOptions]="{standalone: true}"
+      ngDefaultControl>
+      <mat-option *ngFor="let service of dialogData.weatherServices" [value]="service">{{service}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancelDialog()">Cancel</button>
+  <button mat-button class="submit" [mat-dialog-close]="dialogData.selectedWeatherService">Submit</button>
+</div>

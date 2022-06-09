@@ -1,0 +1,12 @@
+.weather {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 770px) {
+  .weather {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}

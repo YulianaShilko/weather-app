@@ -1,0 +1,9 @@
+<div class="current-weather item">
+  <div class="item__wrapper">
+    <img class="item__icon" src="{{'../../../../../../../assets/img/api/'+weather.icon+'.png'}}">
+    <div class="item__info info">
+      <div class="info__today" (click)="showToDo()">TODAY</div>
+      <p class="info__temp">{{weather.temp | CelsiumPipe}} <span [innerHtml]="symbol"></span></p>
+    </div>
+  </div>
+</div>

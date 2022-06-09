@@ -1,0 +1,212 @@
+.container {
+  max-width: 1186px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.todo {
+  border: 1px solid;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  padding: 12px;
+
+  &__title {
+    font-size: 21px;
+
+    color: white;
+    padding: 12px;
+  }
+
+  &__app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__list {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+}
+
+.item {
+  &__title {
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 7px;
+  }
+}
+
+.weather {
+  &__background {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.info {
+  margin-bottom: 56px;
+  margin-top: 10px;
+  padding: 19px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+
+
+  &__city-name {
+    padding-bottom: 10px;
+    font-size: 33px;
+    font-weight: bold;
+  }
+
+  &__date {
+    font-size: 18px;
+  }
+}
+
+.organizer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+
+.styleBackground {
+  position: absolute;
+  height: 98vh;
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.brokenclouds {
+  background-image: url('https://www.e-education.psu.edu/meteo101/sites/www.e-education.psu.edu.meteo101/files/images/lesson1/scattered_clouds0107.jpg');
+  @extend .styleBackground;
+}
+
+.fewclouds {
+  background-image: url('https://tnimage.s3.hicloud.net.tw/photos/shares/5bcc04e854d18.jpg');
+  @extend .styleBackground;
+}
+
+.clearsky {
+  background-image: url('https://media.gettyimages.com/photos/cosmos-flower-field-with-good-weather-and-clear-sky-picture-id1339770234?s=2048x2048');
+  @extend .styleBackground;
+}
+
+.scatteredclouds {
+  background-image: url('https://m.thepeninsulaqatar.com/get/maximage/20220115_1642232458-184.jpeg?1642232458');
+  @extend .styleBackground;
+}
+
+.showerrain,
+.lightintensityshowerrain,
+.heavyintensityshowerrain,
+.showerdrizzle,
+.heavyshowerrainanddrizzle,
+.showerrainanddrizzle,
+.heavyintensitydrizzlerain,
+.drizzlerain,
+.lightintensitydrizzlerain,
+.heavyintensitydrizzle,
+.drizzle,
+.lightintensitydrizzle,
+.lightintensityshowerrain,
+.heavyintensityshowerrain,
+.raggedshowerrain {
+  background-image: url('https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/images/weather/learn-about/weather/rain-storm.jpg');
+  @extend .styleBackground;
+}
+
+.thunderstorm,
+.thunderstormwithlightrain,
+.thunderstormwithrain,
+.thunderstormwithheavyrain,
+.lightthunderstorm,
+.heavythunderstorm,
+.raggedthunderstorm,
+.thunderstormwithlightdrizzle,
+.thunderstormwithdrizzle,
+.thunderstormwithheavydrizzle {
+  background-image: url('https://s7d2.scene7.com/is/image/TWCNews/lightning_jpg-8');
+  @extend .styleBackground;
+}
+
+.lightrain {
+  background-image: url('https://i2.wp.com/scng-dash.digitalfirstmedia.com/wp-content/uploads/2018/04/ldn-l-weather-rain-dc-11.jpg?w=620&crop=0%2C0px%2C100%2C9999px&ssl=1');
+  @extend .styleBackground;
+}
+
+.rain,
+.moderaterain,
+.heavyintensityrain,
+.veryheavyrain,
+.extremerain {
+  background-image: url('https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2021/04/rainalert-1618241651.jpg');
+  @extend .styleBackground;
+}
+
+.snow,
+.freezingrain,
+.lightsnow,
+.Heavysnow,
+.Snow,
+.Sleet,
+.Lightshowersleet,
+.Showersleet,
+.Lightrainandsnow,
+.Rainandsnow,
+.Lightshowersnow,
+.Showersnow,
+.Heavyshowersnow {
+  background-image: url('https://www.thesun.co.uk/wp-content/uploads/2022/02/NINTCHDBPICT000710604832-2.jpg');
+  @extend .styleBackground;
+}
+
+.mist,
+.Smoke,
+.Haze,
+.fog,
+.sand,
+.dust,
+.volcanicash,
+.squalls,
+.tornado {
+  background-image: url('https://c.pxhere.com/photos/85/d1/photo-33709.jpg!d');
+  @extend .styleBackground;
+}
+
+.overcastclouds {
+  background-image: url('https://www.thoughtco.com/thmb/R0sYtSecbtf36JxNiMVJNvrW7k8=/768x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-528903279-599d1549aad52b001107054d.jpg');
+  @extend .styleBackground;
+}
+
+.empty {
+  background-image: url('https://t3.ftcdn.net/jpg/02/11/52/42/360_F_211524227_Ett8aboQvVnROAFtqu3S1pW99Y3Th9vm.jpg');
+  @extend .styleBackground;
+}

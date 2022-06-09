@@ -1,0 +1,11 @@
+<div class="forecast-item item">
+  <div class="item__date" (click)="showToDo()">
+    {{weather?.date | date: 'dd LLLL'}}
+  </div>
+  <div class="item__icon">
+    <img class="img" src="{{'../../../../../../../assets/img/api/'+weather?.icon+'.png'}}">
+  </div>
+  <div class="item__temp">
+    {{weather.temp | CelsiumPipe}} <span [innerHtml]="symbol"></span>
+  </div>
+</div>

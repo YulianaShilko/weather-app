@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="search">
+    <form #f="ngForm">
+      <div class="search__wrapper">
+        <div class="search__choose">
+          <input type="text" class="searchTerm" [(ngModel)]="city" name="city" pattern="^[a-zA-Z, ]+" maxlength="100">
+          <button mat-button type="button" (click)="search()" [disabled]="!f.valid" class="searchButton">Choose The
+            Region
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+        <div class="search__current-region">
+          <button mat-button type="button" (click)="geo()" class="geoButton">Current Region
+            <i class="fas fa-map-marker-alt"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+    <div class="error" *ngIf="!f.valid">only english letters allowed</div>
+  </div>
+</div>

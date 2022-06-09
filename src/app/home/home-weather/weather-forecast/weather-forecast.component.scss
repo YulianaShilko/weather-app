@@ -1,0 +1,23 @@
+.content {
+  margin-left: 45px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__forecast {
+    width: 90px;
+    height: 180px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 770px) {
+  .content {
+    margin-left: 0px;
+
+    &__forecast {
+      width: 47px;
+    }
+  }
+}

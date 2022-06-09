@@ -1,0 +1,42 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 30px;
+
+  &__date {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    align-items: center;
+    border-radius: 11px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  &__temp {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: bisque;
+    font-size: 16px;
+  }
+
+  &__icon {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .img {
+      width: 50px;
+    }
+  }
+}

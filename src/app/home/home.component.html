@@ -1,0 +1,42 @@
+ <div [ngClass]="description === '' ? 'empty' : description | ClassCasePipe">
+   <div class="container">
+     <section class="organizer">
+       <div class="info">
+         <div class="info__city-name">{{weather?.cityName}}</div>
+         <div class="info__date">{{weather?.date | date}}</div>
+       </div>
+       <div class="todo">
+         <div class="todo__title">Todo-List {{clickedDate || '|Press the data|'}}</div>
+         <div class="todo__app">
+           <ng-container *ngIf="clickedDate">
+             <app-add-todo-item (addTodoEvent)="addItem($event)"></app-add-todo-item>
+             <ul class="todo__list">
+               <li class="todo__item item" *ngFor="let todoItem of todoList">
+                 <div class="item__title">
+                   {{ todoItem.title }}
+                 </div>
+                 <button mat-button type="button" (click)="deleteItem(todoItem)">Delete</button>
+               </li>
+             </ul>
+           </ng-container>
+         </div>
+       </div>
+     </section>
+   </div>
+   <div class="weather__background">
+     <footer class="weather">
+       <div class="container">
+         <div class="weather__wrapper">
+           <div class="weather__search" *ngIf="!isLoading">
+             <app-search (searchEvent)="cityChange($event)" (searchGeoEvent)="geoChange($event.coord, $event.service)">
+             </app-search>
+           </div>
+           <div class="weather__content" *ngIf="isShown">
+             <app-home-weather [weather]="weather" [cityDetails]="currentCity" [forecast]="forecast">
+             </app-home-weather>
+           </div>
+         </div>
+       </div>
+     </footer>
+   </div>
+ </div>

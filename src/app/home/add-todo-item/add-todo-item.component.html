@@ -1,0 +1,4 @@
+<input class="todo__input" #inputElementRef [value]="title">
+<button mat-button class="btn" (click)="addTodo(inputElementRef.value)">
+  Save
+</button>
