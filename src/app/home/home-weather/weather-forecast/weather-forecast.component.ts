@@ -3,7 +3,7 @@ import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core
 import { WeatherForecast, Weather } from '../../../interfaces/general';
 
 enum forecastLength {
-  minLength = 1000,
+  minLength = 4,
 }
 
 @Component({
@@ -18,8 +18,10 @@ export class WeatherForecastComponent implements OnInit {
 
   public ngOnInit(): void {
     const forecastArr = Object.entries(this.forecast);
+    forecastArr.shift();
     if (forecastArr.length > forecastLength.minLength) {
       forecastArr.splice(0, 1);
+      forecastArr.splice((forecastLength.minLength as number) + 1);
     }
     forecastArr.forEach((e: any) => {
       const size = e[1].length;
